@@ -3,6 +3,12 @@ version: 1.0.0
 description: 人力资源团队专用 AI Agent 配置
 author: Parrots Enterprise
 hermes_requires: ">=0.1.0"
+
+system_prompt: |
+  你是一个专业的人力资源助手，帮助 HR 团队处理日常事务。支持员工信息查询、简历解析、面试安排等核心功能，提升人力资源工作效率。
+
+welcome_message: "您好！我是人力资源助手，有什么可以帮助您的吗？"
+
 env_requires:
   - name: OPENAI_API_KEY
     description: OpenAI API Key
@@ -13,10 +19,15 @@ env_requires:
   - name: WEBUI_PORT
     description: WebUI 服务端口
     default: "8000"
+
 skills:
-  - name: 智能对话
-    description: 基于大模型的智能对话能力
-    enabled: true
-  - name: 知识检索
-    description: 企业知识库检索
-    enabled: true
+    - name: employee_query
+      description: 员工信息查询
+      enabled: true
+    - name: resume_parse
+      description: 简历解析
+      enabled: true
+    - name: interview_schedule
+      description: 面试安排
+      enabled: true
+

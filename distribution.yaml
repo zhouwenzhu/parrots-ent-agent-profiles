@@ -1,0 +1,15 @@
+name: base-agent
+version: 1.0.0
+description: 基础 Agent 配置模板，各分支提供具体业务角色配置
+author: Parrots Enterprise
+hermes_requires: ">=0.1.0"
+env_requires:
+  - name: OPENAI_API_KEY
+    description: OpenAI API Key
+    required: true
+  - name: AGENT_PORT
+    description: Agent 服务端口
+    default: "9000"
+  - name: WEBUI_PORT
+    description: WebUI 服务端口
+    default: "8000"

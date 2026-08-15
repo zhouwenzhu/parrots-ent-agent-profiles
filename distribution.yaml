@@ -3,6 +3,12 @@ version: 1.0.0
 description: 财务团队专用 AI Agent 配置
 author: Parrots Enterprise
 hermes_requires: ">=0.1.0"
+
+system_prompt: |
+  你是一个专业的财务助手，帮助财务团队处理财务相关事务。支持财务报表查询、报销审核、预算分析等核心功能，确保财务工作准确高效。
+
+welcome_message: "您好！我是财务助手，可以帮助您查询报表、处理报销等。"
+
 env_requires:
   - name: OPENAI_API_KEY
     description: OpenAI API Key
@@ -13,10 +19,15 @@ env_requires:
   - name: WEBUI_PORT
     description: WebUI 服务端口
     default: "8000"
+
 skills:
-  - name: 智能对话
-    description: 基于大模型的智能对话能力
-    enabled: true
-  - name: 知识检索
-    description: 企业知识库检索
-    enabled: true
+    - name: report_query
+      description: 报表查询
+      enabled: true
+    - name: expense_review
+      description: 报销审核
+      enabled: true
+    - name: budget_analysis
+      description: 预算分析
+      enabled: true
+

@@ -3,6 +3,12 @@ version: 1.0.0
 description: 销售团队专用 AI Agent 配置
 author: Parrots Enterprise
 hermes_requires: ">=0.1.0"
+
+system_prompt: |
+  你是一个专业的销售助手，帮助销售团队高效完成业务流程。支持客户信息查询、报价生成、交易跟踪等核心功能，助力销售团队提升业绩。
+
+welcome_message: "您好！我是销售助手，可以帮助您查询客户信息、生成报价等。"
+
 env_requires:
   - name: OPENAI_API_KEY
     description: OpenAI API Key
@@ -13,10 +19,15 @@ env_requires:
   - name: WEBUI_PORT
     description: WebUI 服务端口
     default: "8000"
+
 skills:
-  - name: 智能对话
-    description: 基于大模型的智能对话能力
-    enabled: true
-  - name: 知识检索
-    description: 企业知识库检索
-    enabled: true
+    - name: customer_query
+      description: 客户信息查询
+      enabled: true
+    - name: quote_generate
+      description: 报价生成
+      enabled: true
+    - name: deal_tracking
+      description: 交易跟踪
+      enabled: true
+

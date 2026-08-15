@@ -1,8 +1,9 @@
-name: base-agent
+name: AI Agent 基础配置
 version: 1.0.0
-description: 基础 Agent 配置模板，各分支提供具体业务角色配置
+description: Parrots Enterprise AI Agent 基础配置模板
 author: Parrots Enterprise
 hermes_requires: ">=0.1.0"
+
 env_requires:
   - name: OPENAI_API_KEY
     description: OpenAI API Key
@@ -13,3 +14,8 @@ env_requires:
   - name: WEBUI_PORT
     description: WebUI 服务端口
     default: "8000"
+
+skills:
+  - name: 智能对话
+    description: 基于大模型的智能对话能力
+    enabled: true

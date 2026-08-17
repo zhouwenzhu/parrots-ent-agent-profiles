@@ -248,7 +248,7 @@ MD
 
 write_config_yaml "您好！我是您的智能 AI 助手，请告诉我需要帮助什么？"
 rm -rf skills cron
-mkdir -p skills cron
+mkdir -p skills/general-assistant cron
 cat > skills/general-assistant/SKILL.md <<SKILL
 ---
 name: general-assistant

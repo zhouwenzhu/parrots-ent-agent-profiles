@@ -1,14 +1,14 @@
 name: 客服助手
 version: 1.0.0
 description: 客服团队专用 AI Agent 配置
-author: Parrots Enterprise
 hermes_requires: ">=0.1.0"
+author: Parrots Enterprise
+license: MIT
 
-system_prompt: |
-  你是一个专业的客服助手，负责处理客户咨询和问题反馈。请始终保持礼貌和耐心，准确理解客户需求，提供及时有效的帮助。对于无法解决的问题，及时创建工单并转交相关团队。
-
+# 兼容字段：WebUI 欢迎消息（非 Hermes 标准字段，被安全忽略）
 welcome_message: "您好！我是客服助手，有什么可以帮助您的吗？"
 
+# 安装者需要配置的环境变量
 env_requires:
   - name: OPENAI_API_KEY
     description: OpenAI API Key
@@ -19,15 +19,3 @@ env_requires:
   - name: WEBUI_PORT
     description: WebUI 服务端口
     default: "8000"
-
-skills:
-    - name: faq_answer
-      description: 常见问题解答
-      enabled: true
-    - name: ticket_create
-      description: 创建工单
-      enabled: true
-    - name: sentiment_analysis
-      description: 情感分析
-      enabled: true
-
